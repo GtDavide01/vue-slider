@@ -64,10 +64,11 @@ createApp({
             this.thisSlide = slideClicked;
         },
         intervalSetting: function(){
-            interval = setInterval(this.nextSlide , 2000);
+            this.interval = setInterval(this.nextSlide , 2000);
+            console.log(this.interval);
         },
         stopInterval: function(){
-            clearInterval(interval);
+            clearInterval(this.interval);
         }
     },
     created () {
